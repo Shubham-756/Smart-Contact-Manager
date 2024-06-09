@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title})}">
+
+<head>
+    <title th:text="${loggedinUser.name}+' | SCM'">Profile page</title>
+</head>
+
+<body>
+    <div id="content">
+
+        <!-- user is loggedin : sidebar -->
+    <div th:if="${loggedinUser}">
+        <div th:replace="~{user/sidebar::sidebar}"></div>
+    </div>
+
+    <div class="pl-64 pt-10" style="height: 1000px">
+        <h1>Welcome to Profile Page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum, iure!</p>
+    </div>
+    </div>
+</body>
+
+</html>
